@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-const todo = () => {
+const Todo = () => {
   return (
     <Fragment>
       <div>
@@ -10,4 +10,4 @@ const todo = () => {
   );
 };
 
-export default todo;
+export default Todo;
