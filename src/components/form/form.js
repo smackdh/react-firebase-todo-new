@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Form = () => {
+const Form = (todo) => {
   const [title, setTitle] = useState("");
 
   const titleChangeHandler = (e) => {
@@ -8,7 +8,7 @@ const Form = () => {
     console.log(e.target.value);
   };
 
-  const addTaskHandler = () => {
+  const addTodoHandler = () => {
     console.log("Test");
   };
 
@@ -17,14 +17,14 @@ const Form = () => {
   };
   return (
     <form onSubmit={submitHandler}>
-      <label htmlFor="title"></label>
+      <label htmlFor="title">Add a Todo</label>
       <input
         id="title"
         type="text"
         onChange={titleChangeHandler}
         value={title}
       />
-      <button onClick={addTaskHandler} type="submit">
+      <button onClick={addTodoHandler} type="submit">
         Add Task
       </button>
     </form>
