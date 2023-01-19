@@ -1,7 +1,12 @@
 import firebase from "./components/firebase/firebase";
+import Form from "./components/form/form";
 
 function App() {
-  return <div className="App">Hi</div>;
+  return (
+    <div>
+      <Form />
+    </div>
+  );
 }
 
 export default App;
