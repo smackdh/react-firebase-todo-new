@@ -8,16 +8,25 @@ const Form = () => {
     console.log(e.target.value);
   };
 
+  const addTaskHandler = () => {
+    console.log("Test");
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
   return (
-    <form>
-      <label HtmlFor="title"></label>
+    <form onSubmit={submitHandler}>
+      <label htmlFor="title"></label>
       <input
         id="title"
         type="text"
         onChange={titleChangeHandler}
         value={title}
       />
-      <button type="submit"></button>
+      <button onClick={addTaskHandler} type="submit">
+        Add Task
+      </button>
     </form>
   );
 };
