@@ -1,7 +1,22 @@
-import firebase from "./components/firebase/firebase";
+import React, { useState, useEffect } from 'react'
+import database from "./components/firebase/firebase";
+import {ref} from "firebase/database"
 import Form from "./components/form/form";
 
 function App() {
+  const [todoList, setTodoList] = useState("")
+
+  useEffect(() => {
+    const todoRef = ref(database,'items');
+    todoRef.on('value', (snapshot) => {
+      const todos = snapshot.val();
+      console.log(todos);
+    })
+
+  }, [todoList])
+
+
+
   return (
     <div>
       <Form />

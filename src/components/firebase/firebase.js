@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { get, getDatabase, child, ref} from "firebase/database"
 
 const firebaseConfig = {
   apiKey: "AIzaSyBcUAULcMJ8Y5we5AdFPmAwEeI9gND0Uy8",
@@ -11,7 +12,20 @@ const firebaseConfig = {
   measurementId: "G-ESGVLB2SSG",
 };
 
+
 // Initialize Firebase
 const firebase = initializeApp(firebaseConfig);
+const dbRef = ref(getDatabase(firebase));
 
-export default firebase;
+
+get(child(dbRef, `items/${id}`)).then((snapshot) => {
+  if (snapshot.exists()) {
+    console.log(snapshot.val)
+  } else {
+    console.log("No data");
+  }
+}).catch((error) => {
+  console.log(error)
+});
+
+export default database;
