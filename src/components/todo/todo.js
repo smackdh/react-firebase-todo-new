@@ -1,12 +1,11 @@
-import { Fragment } from "react";
+import React from 'react';
 
-const Todo = () => {
+
+const Todo = ({key, todo}) => {
   return (
-    <Fragment>
-      <div>
-        <h1>Task 1</h1>
-      </div>
-    </Fragment>
+    <li>
+        <h1>{todo.text}</h1>
+    </li>
   );
 };
 

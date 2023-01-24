@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import {db} from "./components/firebase/firebase";
 import {query, collection, onSnapshot} from "firebase/firestore"
 import Form from "./components/form/form";
-import List from "./components/list/list"
+import Todo from "./components/todo/todo"
+// import List from "./components/list/list"
 function App() {
   const [todoList, setTodoList] = useState([])
 
@@ -13,16 +14,21 @@ function App() {
       querySnapshot.forEach((doc) => {
         todosArr.push({...doc.data(), id: doc.id})
       })
-      setTodoList(todosArr)
+      setTodoList(todosArr);
     })
     return () => unsubscribe;
-  }, [todoList])
+  }, []);
 
 
   return (
     <div>
       <Form />
-      <List />
+      <ul>
+      {todoList.map((todo, index) => {
+        <Todo key={index} todo={todo}/>
+      })}
+      asd
+      </ul>
     </div>
   );
 }
