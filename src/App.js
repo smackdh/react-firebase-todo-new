@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from 'react'
-import database from "./components/firebase/firebase";
-import {ref} from "firebase/database"
+import {db} from "./components/firebase/firebase";
+import {query, collection, onSnapshot} from "firebase/firestore"
 import Form from "./components/form/form";
-
+import List from "./components/list/list"
 function App() {
-  const [todoList, setTodoList] = useState("")
+  const [todoList, setTodoList] = useState([])
 
   useEffect(() => {
-    const todoRef = ref(database,'items');
-    todoRef.on('value', (snapshot) => {
-      const todos = snapshot.val();
-      console.log(todos);
+    const q = query(collection(db, 'todos'))
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      let todosArr = []
+      querySnapshot.forEach((doc) => {
+        todosArr.push({...doc.data(), id: doc.id})
+      })
+      setTodoList(todosArr)
     })
-
+    return () => unsubscribe;
   }, [todoList])
-
 
 
   return (
     <div>
       <Form />
+      <List />
     </div>
   );
 }
