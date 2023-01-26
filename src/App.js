@@ -1,34 +1,32 @@
-import React, { useState, useEffect } from 'react'
-import {db} from "./components/firebase/firebase";
-import {query, collection, onSnapshot} from "firebase/firestore"
+import React, { useState, useEffect } from "react";
+import { db } from "./components/firebase/firebase";
+import { query, collection, onSnapshot } from "firebase/firestore";
 import Form from "./components/form/form";
-import Todo from "./components/todo/todo"
+import Todo from "./components/todo/todo";
+import List from "./components/list/list";
 // import List from "./components/list/list"
 function App() {
-  const [todoList, setTodoList] = useState([])
+  const [todoList, setTodoList] = useState([]);
 
   useEffect(() => {
-    const q = query(collection(db, 'todos'))
+    const q = query(collection(db, "todos"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      let todosArr = []
+      let todosArr = [];
       querySnapshot.forEach((doc) => {
-        todosArr.push({...doc.data(), id: doc.id})
-      })
+        todosArr.push({ ...doc.data(), id: doc.id });
+      });
+
       setTodoList(todosArr);
-    })
+    });
     return () => unsubscribe;
   }, []);
 
+  console.log(todoList);
 
   return (
     <div>
       <Form />
-      <ul>
-      {todoList.map((todo, index) => {
-        <Todo key={index} todo={todo}/>
-      })}
-      asd
-      </ul>
+      <List todoList={todoList} />;
     </div>
   );
 }
