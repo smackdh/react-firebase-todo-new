@@ -58,6 +58,28 @@ ul {
   list-style: none;
 }
 
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  background-image: url("./components/resources/incomplete-task.png");
+  background-size: 16px;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  padding: 0 0 0 0px;
+}
+
+input[type="checkbox"]:checked + label {
+  background-image: url("./components/resources/completed-task.png");
+  background-size: 16px;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  padding: 0 0 0 0px;
+}
+
 /* link colors */
 a {
   color: #f3bd3d;
