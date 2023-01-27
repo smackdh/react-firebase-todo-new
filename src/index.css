@@ -9,7 +9,7 @@ body {
   padding: 0;
   min-height: 100vh;
   background-color: #312e28;
-  color: #a69274;
+  color: white;
   font-family: "Titillium Web";
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@ h2 {
 
 .main-container {
   text-align: center;
-  /* height: 1005; */
+  color: #a69274;
   width: 70vw;
   padding: 2rem;
 
@@ -99,4 +99,24 @@ a {
 
 footer {
   margin-top: auto;
+}
+
+button {
+  margin: 10px auto;
+  width: 110px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  /* font-family: '', cursive; */
+  color: #ffc000;
+  font-size: 14px;
+  font-weight: 800;
+  text-shadow: 0 1px 3px #000;
+  text-align: center;
+  padding: 10px 0;
+  background: radial-gradient(circle, #8b0000, #8b0000);
+  border-top: 2px ridge #ffb000;
+  border-left: 2px groove #ffb000;
+  border-right: 2px ridge #ffb000;
+  border-bottom: 2px groove #ffb000;
+  box-shadow: inset 0px 0px 5px 3px rgb(1 1 1 / 30%);
 }
