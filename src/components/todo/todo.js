@@ -10,7 +10,12 @@ const Todo = ({ todo, toggleComplete }) => {
         checked={todo.completed ? "checked" : ""}
       />
       <label htmlFor="checkbox"></label>
-      <h2 onClick={() => toggleComplete(todo)}>{todo.text}</h2>
+      <h2
+        className={todo.completed ? "task-completed" : ""}
+        onClick={() => toggleComplete(todo)}
+      >
+        {todo.text}
+      </h2>
     </li>
   );
 };
