@@ -5,6 +5,7 @@ import {
   collection,
   onSnapshot,
   updateDoc,
+  deleteDoc,
   doc,
 } from "firebase/firestore";
 import Form from "./components/form/form";
@@ -15,12 +16,16 @@ import Header from "./components/UI/header";
 // import List from "./components/list/list"
 function App() {
   const [todoList, setTodoList] = useState([]);
-  const [input, setInput] = useState("");
+  // const [input, setInput] = useState("");
 
   const toggleComplete = async (todo) => {
     await updateDoc(doc(db, "todos", todo.id), {
       completed: !todo.completed,
     });
+  };
+
+  const deleteTodo = async (id) => {
+    await deleteDoc(doc(db, "todos", id));
   };
 
   useEffect(() => {
@@ -40,7 +45,11 @@ function App() {
       <Header />
       <div className="main-container">
         <Form />
-        <List toggleComplete={toggleComplete} todoList={todoList} />
+        <List
+          toggleComplete={toggleComplete}
+          deleteTodo={deleteTodo}
+          todoList={todoList}
+        />
       </div>
       <Footer />
     </>

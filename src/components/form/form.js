@@ -1,15 +1,26 @@
 import React, { useState } from "react";
+import { db } from "../firebase/firebase";
+import { collection, addDoc } from "firebase/firestore";
 
-const Form = (todo) => {
-  const [title, setTitle] = useState("");
+const Form = () => {
+  const [input, setInput] = useState("");
 
-  const titleChangeHandler = (e) => {
-    setTitle(e.target.value);
+  const inputChangeHandler = (e) => {
+    setInput(e.target.value);
     console.log(e.target.value);
   };
 
-  const addTodoHandler = () => {
-    console.log("Test");
+  const createTodo = async (e) => {
+    e.preventDefault(e);
+    if (input === "") {
+      alert("Please enter a valid input");
+      return;
+    }
+    await addDoc(collection(db, "todos"), {
+      text: input,
+      completed: false,
+    });
+    setInput("");
   };
 
   const submitHandler = (e) => {
@@ -17,14 +28,14 @@ const Form = (todo) => {
   };
   return (
     <form onSubmit={submitHandler}>
-      <label htmlFor="title">Add a Todo</label>
+      <label htmlFor="input">Add a Todo</label>
       <input
-        id="title"
+        id="input"
         type="text"
-        onChange={titleChangeHandler}
-        value={title}
+        onChange={inputChangeHandler}
+        value={input}
       />
-      <button onClick={addTodoHandler} type="submit">
+      <button onClick={createTodo} type="submit">
         Add Task
       </button>
     </form>

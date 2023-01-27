@@ -1,6 +1,6 @@
 import React from "react";
 
-const Todo = ({ todo, toggleComplete }) => {
+const Todo = ({ todo, toggleComplete, deleteTodo }) => {
   return (
     <li>
       <input
@@ -16,6 +16,7 @@ const Todo = ({ todo, toggleComplete }) => {
       >
         {todo.text}
       </h2>
+      <button onClick={() => deleteTodo(todo.id)}>Delete</button>
     </li>
   );
 };
