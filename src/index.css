@@ -37,6 +37,12 @@ body {
 }
 
 h2 {
+  color: white;
+  padding-left: 8px;
+}
+
+.task-completed {
+  text-decoration: line-through;
   color: #cd7021;
 }
 
@@ -54,8 +60,13 @@ h2 {
 }
 
 ul {
-  width: 30%;
+  width: 100%;
   list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
 }
 
 input[type="checkbox"] {
@@ -64,18 +75,18 @@ input[type="checkbox"] {
 
 input[type="checkbox"] + label {
   background-image: url("./components/resources/incomplete-task.png");
-  background-size: 16px;
-  height: 16px;
-  width: 16px;
+  background-size: 24px;
+  height: 24px;
+  width: 24px;
   display: inline-block;
   padding: 0 0 0 0px;
 }
 
 input[type="checkbox"]:checked + label {
   background-image: url("./components/resources/completed-task.png");
-  background-size: 16px;
-  height: 16px;
-  width: 16px;
+  background-size: 24px;
+  height: 24px;
+  width: 24px;
   display: inline-block;
   padding: 0 0 0 0px;
 }
