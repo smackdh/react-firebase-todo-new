@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  /* sizing and position */
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: rgb(123, 165, 165);
+  text-align: center;
+  padding-top: 3rem;
+}
+
+ul {
+  list-style: none;
+}

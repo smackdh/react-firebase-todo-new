@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { db } from "./components/firebase/firebase";
 import { query, collection, onSnapshot } from "firebase/firestore";
 import Form from "./components/form/form";
-import Todo from "./components/todo/todo";
 import List from "./components/list/list";
 // import List from "./components/list/list"
 function App() {
@@ -20,13 +19,10 @@ function App() {
     });
     return () => unsubscribe;
   }, []);
-
-  console.log(todoList);
-
   return (
-    <div>
+    <div className="main-container">
       <Form />
-      <List todoList={todoList} />;
+      <List todoList={todoList} />
     </div>
   );
 }
