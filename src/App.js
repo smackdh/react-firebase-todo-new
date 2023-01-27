@@ -4,6 +4,7 @@ import { query, collection, onSnapshot } from "firebase/firestore";
 import Form from "./components/form/form";
 import List from "./components/list/list";
 import logo from "./components/resources/scroll.svg";
+import Footer from "./components/UI/footer";
 
 // import List from "./components/list/list"
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Form />
         <List todoList={todoList} />
       </div>
+      <Footer />
     </>
   );
 }
