@@ -36,7 +36,7 @@ function App() {
         todosArr.push({ ...doc.data(), id: doc.id });
       });
 
-      setTodoList(todosArr);
+      setTodoList(todosArr.reverse());
     });
     return () => unsubscribe;
   }, []);

@@ -39,6 +39,8 @@ body {
 h2 {
   color: white;
   padding-left: 8px;
+  width: 70%;
+  text-align: start;
 }
 
 .task-completed {
@@ -47,6 +49,10 @@ h2 {
 }
 
 .main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: #a69274;
   width: 70vw;
@@ -60,7 +66,7 @@ h2 {
 }
 
 ul {
-  width: 100%;
+  width: 80%;
   list-style: none;
 }
 
