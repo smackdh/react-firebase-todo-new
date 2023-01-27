@@ -28,7 +28,6 @@ const Form = () => {
   };
   return (
     <form onSubmit={submitHandler}>
-      <label htmlFor="input">Add a Todo</label>
       <input
         id="input"
         type="text"
