@@ -1,9 +1,14 @@
 import React from "react";
 
-const Todo = ({ key, todo }) => {
+const Todo = ({ todo, toggleComplete }) => {
   return (
     <li>
-      <h2>{todo.text}</h2>
+      <input
+        onChange={() => toggleComplete(todo)}
+        type="checkbox"
+        checked={todo.completed ? "checked" : ""}
+      />
+      <h2 onClick={() => toggleComplete(todo)}>{todo.text}</h2>
     </li>
   );
 };

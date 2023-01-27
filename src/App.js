@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { db } from "./components/firebase/firebase";
-import { query, collection, onSnapshot } from "firebase/firestore";
+import {
+  query,
+  collection,
+  onSnapshot,
+  updateDoc,
+  doc,
+} from "firebase/firestore";
 import Form from "./components/form/form";
 import List from "./components/list/list";
 import Footer from "./components/UI/footer";
@@ -9,6 +15,13 @@ import Header from "./components/UI/header";
 // import List from "./components/list/list"
 function App() {
   const [todoList, setTodoList] = useState([]);
+  const [input, setInput] = useState("");
+
+  const toggleComplete = async (todo) => {
+    await updateDoc(doc(db, "todos", todo.id), {
+      completed: !todo.completed,
+    });
+  };
 
   useEffect(() => {
     const q = query(collection(db, "todos"));
@@ -27,7 +40,7 @@ function App() {
       <Header />
       <div className="main-container">
         <Form />
-        <List todoList={todoList} />
+        <List toggleComplete={toggleComplete} todoList={todoList} />
       </div>
       <Footer />
     </>
