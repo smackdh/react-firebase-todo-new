@@ -7,6 +7,7 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
   background-color: #312e28;
   color: #a69274;
   font-family: "Titillium Web";
@@ -41,6 +42,7 @@ h2 {
 
 .main-container {
   text-align: center;
+  /* height: 1005; */
   width: 70vw;
   padding: 2rem;
 
@@ -60,4 +62,8 @@ ul {
 a {
   color: #f3bd3d;
   text-decoration: none;
+}
+
+footer {
+  margin-top: auto;
 }

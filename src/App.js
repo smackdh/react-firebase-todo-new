@@ -3,8 +3,8 @@ import { db } from "./components/firebase/firebase";
 import { query, collection, onSnapshot } from "firebase/firestore";
 import Form from "./components/form/form";
 import List from "./components/list/list";
-import logo from "./components/resources/scroll.svg";
 import Footer from "./components/UI/footer";
+import Header from "./components/UI/header";
 
 // import List from "./components/list/list"
 function App() {
@@ -24,10 +24,7 @@ function App() {
   }, []);
   return (
     <>
-      <header className="header">
-        <img src={logo} alt="" />
-        <h1 className="title">Todo List</h1>
-      </header>
+      <Header />
       <div className="main-container">
         <Form />
         <List todoList={todoList} />
