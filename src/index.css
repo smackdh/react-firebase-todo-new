@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700;900&display=swap");
+@font-face {
+  font-family: "LifeCraft";
+  src: "../public/LifeCraft_Font.ttf";
+}
 
 body {
   margin: 0;
@@ -9,11 +13,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .title {
+  font-family: "LifeCraft";
   color: #a94d01;
   text-shadow: black 1px 0 1px;
+  font-size: 46px;
 }
 
 .main-container {
