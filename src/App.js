@@ -20,10 +20,15 @@ function App() {
     return () => unsubscribe;
   }, []);
   return (
-    <div className="main-container">
-      <Form />
-      <List todoList={todoList} />
-    </div>
+    <>
+      <header>
+        <h1 className="title">Todo List</h1>
+      </header>
+      <div className="main-container">
+        <Form />
+        <List todoList={todoList} />
+      </div>
+    </>
   );
 }
 
