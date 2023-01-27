@@ -3,7 +3,7 @@ import React from "react";
 const Todo = ({ key, todo }) => {
   return (
     <li>
-      <h1>{todo.text}</h1>
+      <h2>{todo.text}</h2>
     </li>
   );
 };

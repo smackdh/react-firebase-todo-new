@@ -3,6 +3,8 @@ import { db } from "./components/firebase/firebase";
 import { query, collection, onSnapshot } from "firebase/firestore";
 import Form from "./components/form/form";
 import List from "./components/list/list";
+import logo from "./components/resources/scroll.svg";
+
 // import List from "./components/list/list"
 function App() {
   const [todoList, setTodoList] = useState([]);
@@ -21,7 +23,8 @@ function App() {
   }, []);
   return (
     <>
-      <header>
+      <header className="header">
+        <img src={logo} alt="" />
         <h1 className="title">Todo List</h1>
       </header>
       <div className="main-container">

@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #312e28;
-  color: white;
+  color: #a69274;
   font-family: "Titillium Web";
   display: flex;
   flex-direction: column;
@@ -16,11 +16,27 @@ body {
   text-align: center;
 }
 
-.title {
+.header {
+  display: flex;
+  /* flex-direction: column; */
+  padding-bottom: 20px;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.header > h1 {
+  color: #f6c03b;
   font-family: "LifeCraft";
-  color: #a94d01;
-  text-shadow: black 1px 0 1px;
   font-size: 46px;
+  text-shadow: 2px 0 10px #171512;
+}
+
+.header > img {
+  max-width: 100px;
+}
+
+h2 {
+  color: #cd7021;
 }
 
 .main-container {
@@ -38,4 +54,9 @@ body {
 ul {
   width: 30%;
   list-style: none;
+}
+
+/* link colors */
+a {
+  color: #f3bd3d;
 }
