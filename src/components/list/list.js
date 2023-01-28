@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Todo from "../todo/todo";
 
-const list = ({ toggleComplete, todoList, deleteTodo }) => {
+const List = ({ toggleComplete, todoList, deleteTodo }) => {
+  const [todosLeft, setTodosLeft] = useState("");
+
+  useEffect(() => {
+    const todos = todoList.length;
+    return setTodosLeft(todos);
+  }, [todoList.length]);
+
   return (
     <>
       <ul>
@@ -16,12 +23,8 @@ const list = ({ toggleComplete, todoList, deleteTodo }) => {
           );
         })}
       </ul>
-      <p>
-        {todoList.count
-          ? `You have: ${todoList.count} todos left.`
-          : "No todos."}
-      </p>
+      <p>{todosLeft !== 0 ? `You have some todos!` : `Nothing to do here`}</p>
     </>
   );
 };
-export default list;
+export default List;

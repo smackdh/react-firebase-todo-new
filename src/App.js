@@ -13,10 +13,8 @@ import List from "./components/list/list";
 import Footer from "./components/UI/footer";
 import Header from "./components/UI/header";
 
-// import List from "./components/list/list"
 function App() {
   const [todoList, setTodoList] = useState([]);
-  // const [input, setInput] = useState("");
 
   const toggleComplete = async (todo) => {
     await updateDoc(doc(db, "todos", todo.id), {
