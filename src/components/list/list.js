@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Todo from "../todo/todo";
 
 const List = ({ toggleComplete, todoList, deleteTodo }) => {
-  const [todosLeft, setTodosLeft] = useState("");
+  const [todosLeft, setTodosLeft] = useState(0);
 
   useEffect(() => {
     const todos = todoList.length;
@@ -23,7 +23,11 @@ const List = ({ toggleComplete, todoList, deleteTodo }) => {
           );
         })}
       </ul>
-      <p>{todosLeft !== 0 ? `You have some todos!` : `Nothing to do here`}</p>
+      <p>
+        {todosLeft !== 0
+          ? `You have ${todosLeft} todos left!`
+          : `Nothing to do here`}
+      </p>
     </>
   );
 };
