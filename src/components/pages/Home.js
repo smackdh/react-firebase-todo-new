@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 import Header from "../UI/header";
-import Form from "./components/form/form";
-import List from "./components/list/list";
+import Form from "../form/form";
+import List from "../list/list";
 
-import { db } from "./components/firebase/firebase";
+import { db } from "../firebase/firebase";
 import {
   query,
   collection,
