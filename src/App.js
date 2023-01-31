@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Route, routes } from "react-router-dom";
 import { db } from "./components/firebase/firebase";
 import {
   query,
@@ -12,6 +13,7 @@ import Form from "./components/form/form";
 import List from "./components/list/list";
 import Footer from "./components/UI/footer";
 import Header from "./components/UI/header";
+import Navbar from "./components/UI/navbar";
 
 function App() {
   const [todoList, setTodoList] = useState([]);
@@ -40,15 +42,13 @@ function App() {
   }, []);
   return (
     <>
-      <Header />
-      <div className="main-container">
-        <Form />
-        <List
-          toggleComplete={toggleComplete}
-          deleteTodo={deleteTodo}
-          todoList={todoList}
-        />
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signout" element={<Account />} />
+      </Routes>
+
       <Footer />
     </>
   );
