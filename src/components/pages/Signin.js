@@ -2,7 +2,7 @@ import { GoogleButton } from "react-google-button";
 import { UserAuth } from "../../context/AuthContext";
 
 const Signin = () => {
-  const { googleSignIn } = UserAuth();
+  const { googleSignIn = {} } = UserAuth();
 
   const googleSignInHandler = async () => {
     try {
