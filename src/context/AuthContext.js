@@ -1,5 +1,5 @@
 import React, { useContext, createContext } from "react";
-import { getAuth } from "firebase/auth";
+import { auth } from "../components/firebase/firebase";
 import {
   GoogleAuthProvider,
   signInWithPopup,
@@ -9,7 +9,6 @@ import {
 } from "firebase/auth";
 
 const AuthContext = createContext();
-const auth = getAuth();
 
 export const AuthContextProvider = ({ children }) => {
   const googleSignIn = () => {
