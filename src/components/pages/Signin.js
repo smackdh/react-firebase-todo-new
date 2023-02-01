@@ -4,13 +4,12 @@ import { UserAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const Signin = () => {
-  const { googleSignIn = {}, user } = UserAuth();
+  const { googleSignIn, user } = UserAuth();
   const navigate = useNavigate();
 
   const googleSignInHandler = async () => {
     try {
       await googleSignIn();
-      console.log(user);
     } catch (error) {
       console.log(error);
     }
@@ -18,13 +17,13 @@ const Signin = () => {
 
   useEffect(() => {
     if (user != null) {
-      navigate("/account");
+      navigate("/");
     }
   }, [user]);
 
   return (
     <div>
-      <h1>Sign in</h1>
+      <button>Sign in</button>
       <GoogleButton onClick={googleSignInHandler} />
     </div>
   );

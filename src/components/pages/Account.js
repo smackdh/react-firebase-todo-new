@@ -12,8 +12,12 @@ const Account = () => {
 
   return (
     <div>
-      <h1>Welcome, {user?.displayName}</h1>
-      <button onClick={signOutHandler}>Logout</button>
+      {user?.displayName ? <h1>`Welcome {user.displayName}</h1> : ""}
+      {user?.displayName ? (
+        <button onClick={signOutHandler}>Logout</button>
+      ) : (
+        <h1>Please sign in</h1>
+      )}
     </div>
   );
 };
