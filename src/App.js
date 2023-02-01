@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
-          <Route path="/signout" element={<Account />} />
+          <Route path="/account" element={<Account />} />
         </Routes>
         <Footer />
       </AuthContextProvider>
