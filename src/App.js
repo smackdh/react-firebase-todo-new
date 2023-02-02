@@ -12,25 +12,27 @@ function App() {
     <>
       <AuthContextProvider>
         <Navbar />
-        <Routes>
-          <Route
-            path="/home"
-            element={
-              <Protected>
-                <Home />
-              </Protected>
-            }
-          />
-          <Route path="/signin" element={<Signin />} />
-          <Route
-            path="/account"
-            element={
-              <Protected>
-                <Account />
-              </Protected>
-            }
-          />
-        </Routes>
+        <div className="wrapper">
+          <Routes>
+            <Route
+              path="/home"
+              element={
+                <Protected>
+                  <Home />
+                </Protected>
+              }
+            />
+            <Route path="/signin" element={<Signin />} />
+            <Route
+              path="/account"
+              element={
+                <Protected>
+                  <Account />
+                </Protected>
+              }
+            />
+          </Routes>
+        </div>
         <Footer />
       </AuthContextProvider>
     </>
