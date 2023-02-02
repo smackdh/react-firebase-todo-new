@@ -22,14 +22,7 @@ function App() {
               </Protected>
             }
           />
-          <Route
-            path="/signin"
-            element={
-              <Protected>
-                <Signin />
-              </Protected>
-            }
-          />
+          <Route path="/signin" element={<Signin />} />
           <Route
             path="/account"
             element={
