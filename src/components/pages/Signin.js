@@ -26,7 +26,7 @@ const Signin = () => {
       {!user ? (
         <GoogleButton onClick={googleSignInHandler} />
       ) : (
-        navigate("/account")
+        navigate("/home")
       )}
     </div>
   );
