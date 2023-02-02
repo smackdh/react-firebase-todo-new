@@ -11,8 +11,8 @@ function App() {
   return (
     <>
       <AuthContextProvider>
-        <Navbar />
         <div className="wrapper">
+          <Navbar />
           <Routes>
             <Route
               path="/home"
@@ -32,8 +32,8 @@ function App() {
               }
             />
           </Routes>
+          <Footer />
         </div>
-        <Footer />
       </AuthContextProvider>
     </>
   );

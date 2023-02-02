@@ -1,21 +1,22 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { UserAuth } from "../../context/AuthContext";
 
 const Navbar = () => {
   const location = useLocation().pathname;
-  console.log(location);
-  const navStyle = {
-    height: "50px",
-    padding: "16px",
-    borderBottom: "2px solid black",
-  };
+  const { logOut, user } = UserAuth();
 
   return (
-    <div style={navStyle}>
-      {location === "/account" ? (
-        "Bruh"
+    <div className="navbar">
+      {!user ? (
+        <Link to="/signin">Sign In</Link>
       ) : (
-        <Link to="/account">Account Page</Link>
+        <div>
+          <Link to="/account">Account Page</Link>
+          <Link onClick={logOut} to="/signin">
+            Logout
+          </Link>
+        </div>
       )}
     </div>
   );
