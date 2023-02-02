@@ -4,6 +4,11 @@
   src: "../public/LifeCraft_Font.ttf";
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
   margin: 0;
   padding: 0;
@@ -26,6 +31,10 @@
   justify-content: center;
   align-items: center;
   padding-top: 3rem;
+
+  && > h1 {
+    color: #f6c03b;
+  }
 }
 
 .header > h1 {
