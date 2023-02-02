@@ -1,9 +1,9 @@
-import { Link, Navigate } from "react-router-dom";
-// import { auth } from "../firebase/firebase";
-// import { useAuthState } from "react-firebase-hooks/auth";
-import { UserAuth } from "../../context/AuthContext";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation().pathname;
+  console.log(location);
   const navStyle = {
     height: "50px",
     padding: "16px",
@@ -12,7 +12,11 @@ const Navbar = () => {
 
   return (
     <div style={navStyle}>
-      <Link to="/account">Account Page</Link>
+      {location === "/account" ? (
+        "Bruh"
+      ) : (
+        <Link to="/account">Account Page</Link>
+      )}
     </div>
   );
 };

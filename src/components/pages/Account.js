@@ -15,7 +15,11 @@ const Account = () => {
 
   return (
     <div>
-      {user?.displayName ? <h1>`Welcome {user.displayName}</h1> : ""}
+      {user?.displayName ? (
+        <h1>Welcome, {user.displayName.split(" ")[0]}</h1>
+      ) : (
+        ""
+      )}
       {user?.displayName ? (
         <button onClick={signOutHandler}>Logout</button>
       ) : (
