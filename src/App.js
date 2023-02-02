@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/UI/navbar";
 import Footer from "./components/UI/footer";

@@ -1,30 +1,33 @@
-import { useEffect } from "react";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+// import { useEffect } from "react";
 import { GoogleButton } from "react-google-button";
-import { UserAuth } from "../../context/AuthContext";
+// import { UserAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase/firebase";
 
 const Signin = () => {
-  const { googleSignIn, user } = UserAuth();
+  // const { googleSignIn, user } = UserAuth();
   const navigate = useNavigate();
+  const [user, loading] = useAuthState(auth);
+  const googleProvider = new GoogleAuthProvider();
 
   const googleSignInHandler = async () => {
     try {
-      await googleSignIn();
+      const result = await signInWithPopup(auth, googleProvider);
+      console.log(result.user);
     } catch (error) {
       console.log(error);
     }
   };
 
-  useEffect(() => {
-    if (user != null) {
-      navigate("/");
-    }
-  }, []);
-
   return (
     <div>
-      <button>Sign in</button>
-      <GoogleButton onClick={googleSignInHandler} />
+      {!user ? (
+        <GoogleButton onClick={googleSignInHandler} />
+      ) : (
+        navigate("/account")
+      )}
     </div>
   );
 };

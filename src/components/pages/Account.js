@@ -1,6 +1,9 @@
 import { UserAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+
 const Account = () => {
   const { logOut, user } = UserAuth();
+  const navigate = useNavigate();
 
   const signOutHandler = async () => {
     try {
@@ -16,7 +19,7 @@ const Account = () => {
       {user?.displayName ? (
         <button onClick={signOutHandler}>Logout</button>
       ) : (
-        <h1>Please sign in</h1>
+        navigate("/signin")
       )}
     </div>
   );
