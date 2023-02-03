@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 import { BiLogIn, BiLogOut } from "react-icons/bi";
-import { RiAccountCircleFill } from "react-icons/ri";
+import { RiAccountCircleFill, RiTaskLine } from "react-icons/ri";
 
 const Navbar = () => {
   const location = useLocation().pathname;
@@ -18,6 +18,7 @@ const Navbar = () => {
       ) : (
         <div className="navbar-menu">
           <Link className="todos-link" to="/home">
+            <RiTaskLine />
             Todos
           </Link>
           <Link to="/account">

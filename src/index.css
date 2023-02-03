@@ -40,7 +40,7 @@ body {
 
 .navbar .navbar-menu {
   display: flex;
-
+  justify-content: end;
   width: 100%;
 }
 
@@ -48,7 +48,6 @@ body {
   padding: 0 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .navbar a svg {
@@ -57,8 +56,9 @@ body {
 }
 
 .navbar .todos-link {
-  align-self: flex-start;
+  flex: 1;
 }
+
 /*------ HEADER START  ------*/
 
 .header {
