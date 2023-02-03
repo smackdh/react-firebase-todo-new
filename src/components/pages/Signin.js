@@ -1,5 +1,6 @@
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { GoogleButton } from "react-google-button";
+import { GoogleLoginButton } from "react-social-login-buttons";
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase/firebase";
@@ -26,8 +27,7 @@ const Signin = () => {
 
       {!user ? (
         <div className="sign-in-options">
-          {" "}
-          <GoogleButton onClick={googleSignInHandler} />
+          <GoogleLoginButton onClick={googleSignInHandler} />
         </div>
       ) : (
         navigate("/home")

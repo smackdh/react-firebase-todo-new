@@ -17,7 +17,9 @@ const Todo = ({ todo, toggleComplete, deleteTodo }) => {
         >
           {todo.text}
         </h2>
-        <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+        <button className="fantasy-button" onClick={() => deleteTodo(todo.id)}>
+          Delete
+        </button>
       </li>
     </>
   );

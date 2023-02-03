@@ -21,7 +21,9 @@ const Account = () => {
         ""
       )}
       {user?.displayName ? (
-        <button onClick={signOutHandler}>Logout</button>
+        <button className="fantasy-button" onClick={signOutHandler}>
+          Logout
+        </button>
       ) : (
         navigate("/signin")
       )}
