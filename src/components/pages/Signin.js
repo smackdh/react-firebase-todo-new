@@ -21,14 +21,17 @@ const Signin = () => {
 
   return (
     <div className="main-container">
+      <h1 className="text-shine">Start your journey here</h1>
       <h3>Choose your login option</h3>
-      <div>
-        {!user ? (
+
+      {!user ? (
+        <div className="sign-in-options">
+          {" "}
           <GoogleButton onClick={googleSignInHandler} />
-        ) : (
-          navigate("/home")
-        )}
-      </div>
+        </div>
+      ) : (
+        navigate("/home")
+      )}
     </div>
   );
 };

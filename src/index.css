@@ -224,3 +224,12 @@ form > input {
 form > input:focus {
   outline: none;
 }
+
+/*------ SIGNIN START  ------*/
+.text-shine {
+  flex: 1;
+}
+
+.sign-in-options {
+  flex: 2;
+}
