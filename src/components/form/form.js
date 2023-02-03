@@ -34,7 +34,7 @@ const Form = () => {
         onChange={inputChangeHandler}
         value={input}
       />
-      <button onClick={createTodo} type="submit">
+      <button className="fantasy-button" onClick={createTodo} type="submit">
         Add Task
       </button>
     </form>

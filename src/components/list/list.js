@@ -3,11 +3,18 @@ import Todo from "../todo/todo";
 
 const List = ({ toggleComplete, todoList, deleteTodo }) => {
   const [todosLeft, setTodosLeft] = useState(0);
+  const incompleteTodos = [];
 
   useEffect(() => {
-    const todos = todoList.length;
-    return setTodosLeft(todos);
-  }, [todoList.length]);
+    todoList.forEach((todo) => {
+      if (todo.completed !== true) {
+        incompleteTodos.push(todo);
+      } else {
+        return;
+      }
+    });
+    return setTodosLeft(incompleteTodos.length);
+  }, [incompleteTodos]);
 
   return (
     <>
