@@ -41,7 +41,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="main-container">
         <Form />
         <List

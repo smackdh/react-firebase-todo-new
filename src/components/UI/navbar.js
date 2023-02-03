@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
           <Link onClick={logOut} to="/signin">
             <BiLogOut />
-            Logout
+            Sign Out
           </Link>
         </div>
       )}
