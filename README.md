@@ -11,7 +11,7 @@
 7. CSS Signin-Page
 8. Data Account-Page
 9. CSS Account-Page
-10. Github Login
+10. Github Login ✅
 11. User Specfic Todo
 12. Navbar and Design
 
