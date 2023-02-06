@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="navbar-menu">
           <Link className="todos-link" to="/home">
             <RiTaskLine />
-            Todos
+            Armory
           </Link>
           <Link to="/account">
             <RiAccountCircleFill />

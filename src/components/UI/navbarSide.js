@@ -3,8 +3,11 @@ import { useLocation } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 import { BiLogIn, BiLogOut } from "react-icons/bi";
 import { RiAccountCircleFill, RiTaskLine } from "react-icons/ri";
+import { useEffect, useState } from "react";
 
 const NavbarSide = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+
   const location = useLocation().pathname;
   const { logOut, user } = UserAuth();
 
