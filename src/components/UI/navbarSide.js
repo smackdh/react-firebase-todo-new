@@ -3,23 +3,26 @@ import { useLocation } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 import { BiLogIn, BiLogOut } from "react-icons/bi";
 import { RiAccountCircleFill, RiTaskLine } from "react-icons/ri";
+import { useEffect, useState } from "react";
 
-const Navbar = () => {
+const NavbarSide = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+
   const location = useLocation().pathname;
   const { logOut, user } = UserAuth();
 
   return (
-    <div className="navbar">
+    <div className="navbarSide">
       {!user ? (
         <Link to="/signin">
           <BiLogIn />
           Sign In
         </Link>
       ) : (
-        <div className="navbar-menu">
+        <div className="navbarSide-menu">
           <Link className="todos-link" to="/home">
             <RiTaskLine />
-            Armory
+            Todos
           </Link>
           <Link to="/account">
             <RiAccountCircleFill />
@@ -35,4 +38,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarSide;
