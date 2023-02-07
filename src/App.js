@@ -14,31 +14,34 @@ function App() {
   return (
     <>
       <AuthContextProvider>
-        <div className="wrapper">
+        <div className="main-wrapper">
           <Navbar isShown={isShown} setIsShown={setIsShown} />
           <div className="mid-wrapper">
             <NavbarSide isShown={isShown} />
-            <Routes>
-              <Route
-                path="/home"
-                element={
-                  <Protected>
-                    <Home />
-                  </Protected>
-                }
-              />
-              <Route path="/signin" element={<Signin />} />
-              <Route
-                path="/account"
-                element={
-                  <Protected>
-                    <Account />
-                  </Protected>
-                }
-              />
-            </Routes>
+            <div className="container-right">
+              <div className="container-thin" />
+              <Routes>
+                <Route
+                  path="/home"
+                  element={
+                    <Protected>
+                      <Home />
+                    </Protected>
+                  }
+                />
+                <Route path="/signin" element={<Signin />} />
+                <Route
+                  path="/account"
+                  element={
+                    <Protected>
+                      <Account />
+                    </Protected>
+                  }
+                />
+              </Routes>
+              <Footer />
+            </div>
           </div>
-          <Footer />
         </div>
       </AuthContextProvider>
     </>
