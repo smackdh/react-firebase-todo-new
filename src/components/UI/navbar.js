@@ -1,12 +1,17 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 import { BiLogIn, BiLogOut } from "react-icons/bi";
 import { RiAccountCircleFill, RiTaskLine } from "react-icons/ri";
 
-const Navbar = () => {
-  const location = useLocation().pathname;
+const Navbar = ({ isShown, setIsShown }) => {
+  // const [isShown, setIsShown] = useState(false);
   const { logOut, user } = UserAuth();
+
+  const toggleArmory = () => {
+    setIsShown(!isShown);
+    console.log(isShown);
+  };
 
   return (
     <div className="navbar">
@@ -17,10 +22,10 @@ const Navbar = () => {
         </Link>
       ) : (
         <div className="navbar-menu">
-          <Link className="todos-link" to="/home">
+          <button className="armory-toggle" onClick={toggleArmory}>
             <RiTaskLine />
-            Armory
-          </Link>
+            {`${isShown}`}
+          </button>
           <Link to="/account">
             <RiAccountCircleFill />
             Account Page

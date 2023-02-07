@@ -7,15 +7,17 @@ import Home from "./components/pages/Home";
 import { AuthContextProvider } from "./context/AuthContext";
 import Protected from "./components/Protected";
 import NavbarSide from "./components/UI/navbarSide";
+import { useState } from "react";
 
 function App() {
+  const [isShown, setIsShown] = useState(false);
   return (
     <>
       <AuthContextProvider>
         <div className="wrapper">
-          <Navbar />
+          <Navbar isShown={isShown} setIsShown={setIsShown} />
           <div className="mid-wrapper">
-            <NavbarSide />
+            <NavbarSide isShown={isShown} />
             <Routes>
               <Route
                 path="/home"
