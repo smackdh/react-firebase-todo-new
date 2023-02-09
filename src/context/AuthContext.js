@@ -16,7 +16,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const googleSignIn = () => {
     const googleProvider = new GoogleAuthProvider();
-    signInWithPopup(auth, googleProvider);
+    signInWithRedirect(auth, googleProvider);
   };
 
   const githubSignIn = () => {

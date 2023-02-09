@@ -7,7 +7,7 @@ const NavbarSide = ({ isShown }) => {
   const { logOut, user } = UserAuth();
 
   return (
-    <div className={`navbarSide ${isShown ? "pen" : "hidden"}`}>
+    <nav className={`navbarSide ${isShown ? "" : "hidden"}`}>
       <div className="navbarSide-menu">
         <Link className="todos-link" to="/home">
           <RiTaskLine />
@@ -22,7 +22,7 @@ const NavbarSide = ({ isShown }) => {
           Sign Out
         </Link>
       </div>
-    </div>
+    </nav>
   );
 };
 
