@@ -13,7 +13,7 @@ import {
   doc,
 } from "firebase/firestore";
 
-const Home = () => {
+const Todos = () => {
   const [todoList, setTodoList] = useState([]);
 
   const toggleComplete = async (todo) => {
@@ -53,4 +53,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Todos;

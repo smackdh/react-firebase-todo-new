@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Todo from "../todo/todo";
+import "./list.css";
 
 const List = ({ toggleComplete, todoList, deleteTodo }) => {
   const [todosLeft, setTodosLeft] = useState(0);

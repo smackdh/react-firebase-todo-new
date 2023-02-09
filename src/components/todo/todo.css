@@ -1,0 +1,26 @@
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  background-image: url("../../components/resources/incomplete.svg");
+  background-size: 32px;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  padding: 0 0 0 0px;
+}
+
+input[type="checkbox"]:checked + label {
+  background-image: url("../../components/resources/completed.svg");
+  background-size: 32px;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  padding: 0 0 0 0px;
+}
+
+.task-completed {
+  text-decoration: line-through;
+  color: #cd7021;
+}

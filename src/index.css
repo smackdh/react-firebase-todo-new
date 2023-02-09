@@ -36,11 +36,6 @@ h2 {
   text-align: start;
 }
 
-.task-completed {
-  text-decoration: line-through;
-  color: #cd7021;
-}
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -73,28 +68,6 @@ li {
   align-items: center;
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
-input[type="checkbox"] + label {
-  background-image: url("./components/resources/incomplete.svg");
-  background-size: 32px;
-  height: 32px;
-  width: 32px;
-  display: inline-block;
-  padding: 0 0 0 0px;
-}
-
-input[type="checkbox"]:checked + label {
-  background-image: url("./components/resources/completed.svg");
-  background-size: 32px;
-  height: 32px;
-  width: 32px;
-  display: inline-block;
-  padding: 0 0 0 0px;
-}
-
 /* link colors */
 a {
   color: #f9c23e;
@@ -109,36 +82,8 @@ a:hover {
 a:active {
   color: #fcb100;
 }
-/* FOOTER START */
 
 /* OTHER COMPONENTS  */
-
-form {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 16px;
-}
-
-form > label {
-  font-size: 18px;
-}
-
-form > input {
-  padding-inline: 8px;
-  width: 200px;
-  border-radius: 8px;
-  height: 24px;
-  border-top: 2px ridge #ffb000;
-  border-left: 2px groove #ffb000;
-  border-right: 2px ridge #ffb000;
-  border-bottom: 2px groove #ffb000;
-  box-shadow: inset 0px 0px 5px 3px rgb(1 1 1 / 30%);
-}
-
-form > input:focus {
-  outline: none;
-}
 
 .fantasy-button {
   margin: 10px auto;
@@ -184,8 +129,6 @@ form > input:focus {
 .sign-in-options {
   flex: 2;
 }
-
-/* NAVBAR SIDE */
 
 .hidden {
   transform: translateX(-355px);
