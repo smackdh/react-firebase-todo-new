@@ -24,3 +24,10 @@ input[type="checkbox"]:checked + label {
   text-decoration: line-through;
   color: #cd7021;
 }
+
+h2 {
+  color: white;
+  padding-left: 8px;
+  width: 70%;
+  text-align: start;
+}

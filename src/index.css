@@ -29,13 +29,6 @@ body {
   gap: 4rem;
 }
 
-h2 {
-  color: white;
-  padding-left: 8px;
-  width: 70%;
-  text-align: start;
-}
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -56,16 +49,6 @@ h2 {
 
   transition: transform 0.2s;
   overflow-x: hidden;
-}
-
-ul {
-  width: 80%;
-  list-style: none;
-}
-
-li {
-  display: flex;
-  align-items: center;
 }
 
 /* link colors */
@@ -135,6 +118,6 @@ a:active {
   transition: transform 0.2s;
 }
 
-.armory-open {
+.navbarSide-open {
   transform: translateX(125px);
 }

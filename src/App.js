@@ -18,7 +18,9 @@ function App() {
           <Navbar isShown={isShown} setIsShown={setIsShown} />
           <div className="mid-wrapper">
             <NavbarSide isShown={isShown} />
-            <div className={`container-right ${isShown ? "armory-open" : ""}`}>
+            <div
+              className={`container-right ${isShown ? "navbarSide-open" : ""}`}
+            >
               <div className="container-thin" />
               <Routes>
                 <Route
