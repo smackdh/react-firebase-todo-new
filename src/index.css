@@ -16,10 +16,6 @@ body {
   background-color: #131517;
   color: white;
   font-family: "Titillium Web";
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("./components/resources/darkletter2.png");
@@ -27,11 +23,9 @@ body {
 
 /*------ NAVBAR START  ------*/
 .navbar {
-  position: fixed;
-  top: 0;
+  justify-content: end;
   display: flex;
   align-items: center;
-  justify-content: end;
   height: 50px;
   padding: 8px 0px;
   width: 100%;
@@ -86,6 +80,8 @@ body {
 .container-right {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
 }
 
 h2 {
@@ -245,69 +241,8 @@ form > input:focus {
 }
 
 /* NAVBAR SIDE */
-.mid-wrapper {
-  /* display: flex; */
-  /* align-items: center;
-  gap: 32px;
-  height: 100%; */
-}
-
-.navbarSide {
-  /* height: 100%; */
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.4);
-  border: 1px solid #3c3c3c;
-  border-radius: 7px;
-  box-shadow: inset 0 0 10px rgb(0 0 0 / 40%), 0 0 0 1px rgb(255 255 255 / 4%);
-
-  /* NEW SHIT */
-  height: calc(100vh - 75px);
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translateX(0);
-  transition: transform 0.2s;
-}
-
-.navbarSide-menu {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  gap: 16px;
-  height: auto;
-  min-height: 30rem;
-  justify-content: center;
-}
-
-.navbarSide a {
-  display: block;
-  width: auto;
-  letter-spacing: 2px;
-  border-radius: 8px;
-  color: #ffc000;
-  font-size: 14px;
-  font-weight: 800;
-  text-shadow: 0 1px 3px #000;
-  text-align: center;
-  padding: 10px 10px;
-  background: radial-gradient(circle, #8b0000, #8b0000);
-  border-top: 2px ridge #ffb000;
-  border-left: 2px groove #ffb000;
-  border-right: 2px ridge #ffb000;
-  border-bottom: 2px groove #ffb000;
-  box-shadow: inset 0px 0px 5px 3px rgb(1 1 1 / 30%);
-}
-
-.navbarSide a:hover {
-  background-position: right center;
-  color: #3b3b3b;
-}
 
 .hidden {
-  /* display: none; */
   transform: translateX(-355px);
   transition: transform 0.2s;
 }

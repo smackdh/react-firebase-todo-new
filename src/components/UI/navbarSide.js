@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 import { BiLogIn, BiLogOut } from "react-icons/bi";
 import { RiAccountCircleFill, RiTaskLine } from "react-icons/ri";
+import "./navbarSide.css";
 
 const NavbarSide = ({ isShown }) => {
   const { logOut, user } = UserAuth();
