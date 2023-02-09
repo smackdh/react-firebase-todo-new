@@ -5,7 +5,7 @@ import { RiAccountCircleFill, RiTaskLine } from "react-icons/ri";
 import "./navbarSide.css";
 
 const NavbarSide = ({ isShown }) => {
-  const { logOut, user } = UserAuth();
+  const { logOut } = UserAuth();
 
   return (
     <nav className={`navbarSide ${isShown ? "" : "hidden"}`}>
