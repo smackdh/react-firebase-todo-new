@@ -1,0 +1,26 @@
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+form > label {
+  font-size: 18px;
+}
+
+form > input {
+  padding-inline: 8px;
+  width: 200px;
+  border-radius: 8px;
+  height: 24px;
+  border-top: 2px ridge #ffb000;
+  border-left: 2px groove #ffb000;
+  border-right: 2px ridge #ffb000;
+  border-bottom: 2px groove #ffb000;
+  box-shadow: inset 0px 0px 5px 3px rgb(1 1 1 / 30%);
+}
+
+form > input:focus {
+  outline: none;
+}

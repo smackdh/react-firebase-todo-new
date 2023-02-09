@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer className="container-thin">
       <p>
         Copyright © 2023{" "}
         <a href="https://github.com/smackdh">Mattias Velamsson</a>{" "}
