@@ -1,7 +1,7 @@
 .mid-wrapper {
   display: flex;
   height: 100vh;
-  justify-content: center;
+  align-items: center;
 }
 
 .navbarSide {
@@ -14,11 +14,8 @@
   box-shadow: inset 0 0 10px rgb(0 0 0 / 40%), 0 0 0 1px rgb(255 255 255 / 4%);
 
   /* NEW SHIT */
-  height: calc(100vh - 75px);
+  height: 70%;
   width: 250px;
-  position: fixed;
-  top: 0;
-  left: 0;
   transform: translateX(0);
   transition: transform 0.2s;
 }
@@ -26,10 +23,9 @@
 .navbarSide-menu {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 0px 2rem;
   gap: 16px;
-  height: auto;
-  min-height: 30rem;
+  height: 100%;
   justify-content: center;
 }
 
