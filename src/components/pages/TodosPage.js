@@ -40,7 +40,6 @@ const TodosPage = () => {
   }, []);
   return (
     <>
-      {/* <Header /> */}
       <div className="main-container">
         <Form />
         <List
