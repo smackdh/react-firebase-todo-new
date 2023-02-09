@@ -21,7 +21,7 @@ body {
     url("./components/resources/darkletter2.png");
 }
 
-/*------ MAIN-CONTAINER START  ------*/
+/*------ GLOBAL CONTAINERS  ------*/
 .container-right {
   display: flex;
   flex-direction: column;
@@ -51,7 +51,17 @@ body {
   overflow-x: hidden;
 }
 
-/* link colors */
+.container-thin {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #3c3c3c;
+  border-radius: 7px;
+  box-shadow: inset 0 0 10px rgb(0 0 0 / 40%), 0 0 0 1px rgb(255 255 255 / 4%);
+  height: 50px;
+  width: 70vw;
+  padding: 0px 2rem;
+}
+
+/*------ GLOBAL LINKS  ------*/
 a {
   color: #f9c23e;
   text-decoration: none;
@@ -66,7 +76,7 @@ a:active {
   color: #fcb100;
 }
 
-/* OTHER COMPONENTS  */
+/*------ GLOBAL BUTTON CLASS  ------*/
 
 .fantasy-button {
   margin: 10px auto;
@@ -98,20 +108,7 @@ a:active {
   box-shadow: 0px 0 5px 5px rgba(255, 255, 255, 0.2);
 }
 
-.container-thin {
-  background-color: rgba(0, 0, 0, 0.4);
-  border: 1px solid #3c3c3c;
-  border-radius: 7px;
-  box-shadow: inset 0 0 10px rgb(0 0 0 / 40%), 0 0 0 1px rgb(255 255 255 / 4%);
-  height: 50px;
-  width: 70vw;
-  padding: 0px 2rem;
-}
-
-/*------ SIGNIN START  ------*/
-.sign-in-options {
-  flex: 2;
-}
+/*------ GLOBAL NAVBAR SIDE CLASSES  ------*/
 
 .hidden {
   transform: translateX(-355px);
@@ -120,4 +117,10 @@ a:active {
 
 .navbarSide-open {
   transform: translateX(125px);
+}
+
+/*------ OTHER CLASSES  ------*/
+/*------ SIGNIN START  ------*/
+.sign-in-options {
+  flex: 2;
 }
