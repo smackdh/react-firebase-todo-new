@@ -2,7 +2,6 @@ import {
   GithubAuthProvider,
   GoogleAuthProvider,
   signInWithPopup,
-  signInWithRedirect,
 } from "firebase/auth";
 import { GoogleButton } from "react-google-button";
 import {
@@ -49,7 +48,7 @@ const Signin = () => {
           <GithubLoginButton onClick={gitHubSignInHandler} />
         </div>
       ) : (
-        navigate("/home")
+        navigate("/todos")
       )}
     </div>
   );

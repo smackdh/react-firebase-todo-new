@@ -3,7 +3,7 @@ import Navbar from "./components/UI/navbar";
 import Footer from "./components/UI/footer";
 import Account from "./components/pages/Account";
 import Signin from "./components/pages/Signin";
-import Home from "./components/pages/Home";
+import TodosPage from "./components/pages/TodosPage";
 import { AuthContextProvider } from "./context/AuthContext";
 import Protected from "./components/Protected";
 import NavbarSide from "./components/UI/navbarSide";
@@ -22,10 +22,10 @@ function App() {
               <div className="container-thin" />
               <Routes>
                 <Route
-                  path="/home"
+                  path="/todos"
                   element={
                     <Protected>
-                      <Home isShown={isShown} />
+                      <TodosPage isShown={isShown} />
                     </Protected>
                   }
                 />
