@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import Header from "../UI/header";
 import Form from "../form/form";
 import List from "../list/list";
 
