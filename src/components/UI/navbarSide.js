@@ -10,7 +10,7 @@ const NavbarSide = ({ isShown }) => {
   return (
     <nav className={`navbarSide ${isShown ? "" : "hidden"}`}>
       <div className="navbarSide-menu">
-        <Link className="todos-link" to="/home">
+        <Link className="todos-link" to="/todos">
           <RiTaskLine />
           Todos
         </Link>
