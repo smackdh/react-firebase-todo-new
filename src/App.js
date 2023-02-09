@@ -21,7 +21,7 @@ function App() {
             <div
               className={`container-right ${isShown ? "navbarSide-open" : ""}`}
             >
-              <div className="container-thin" />
+              <div className="container-thin">This will be a title/path </div>
               <Routes>
                 <Route
                   path="/todos"
