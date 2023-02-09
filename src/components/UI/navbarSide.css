@@ -56,3 +56,8 @@
   background-position: right center;
   color: #3b3b3b;
 }
+
+.hidden {
+  transform: translateX(-355px);
+  transition: transform 0.2s;
+}
