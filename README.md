@@ -7,7 +7,7 @@
 3. Delete from DB ✅
 4. Login with Google ✅
 5. Logout ✅
-6. Proteced Access ✅
+6. Protected Access ✅
 7. CSS Signin-Page
 8. Data Account-Page
 9. CSS Account-Page
